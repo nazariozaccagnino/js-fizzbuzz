@@ -1,5 +1,3 @@
-let buzz;
-let fizzbuzz;
 const wrapper = document.querySelector('.app');
 wrapper.className = 'd-flex flex-wrap'
 
