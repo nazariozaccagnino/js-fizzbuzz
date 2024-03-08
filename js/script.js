@@ -15,12 +15,16 @@ Crea un container nel DOM , aggiungendo (attraverso la funzione append()) un ele
 Applica stili differenti agli elementi aggiunti al DOM nel BONUS 1, a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz.
 Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna.
 */
-
+const wrapper = document.createElement('div')
+wrapper.className = 'd-flex justify-content-between align-content-center'
 let maxnum = 100;
 
 for(let i = 1; i<=maxnum; i++){
-    console.log(i)
+    // console.log(i)
     if (i % 3 === 0){
         console.log(i, 'divisibile per 3')
+    } else if( i % 5 === 0){
+        console.log(i, 'divisibile per 5')
     }
+    document.getElementById('prova').innerHTML = i
 }
