@@ -15,16 +15,34 @@ Crea un container nel DOM , aggiungendo (attraverso la funzione append()) un ele
 Applica stili differenti agli elementi aggiunti al DOM nel BONUS 1, a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz.
 Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna.
 */
-const wrapper = document.createElement('div')
-wrapper.className = 'd-flex justify-content-between align-content-center'
+// const wrapper = document.createElement('div');
+// wrapper.className = 'd-flex justify-content-between align-content-center';
+//const boxes = document.createElement('div');
+//boxes.className = 'square';
+//wrapper.setAttribute =('class, square');
+//console.log(wrapper);
+// const container = document.querySelector('.container');
+// container.append(wrapper)
+let box = document.createElement('div');
+box.setAttribute('class','square')
+const wrapper = document.querySelector('.container-fluid');
+wrapper.className = 'd-flex flex-wrap'
+// wrapper.append(box)
+
+
 let maxnum = 100;
+let tmpHtml = '';
 
 for(let i = 1; i<=maxnum; i++){
     // console.log(i)
     if (i % 3 === 0){
         console.log(i, 'divisibile per 3')
+        tmpHtml += `<div class="square"> ${i} </div>`
     } else if( i % 5 === 0){
-        console.log(i, 'divisibile per 5')
+        // console.log(i, 'divisibile per 5')
+        tmpHtml += `<div class="square"> ${i} </div>`
+    }else{
+        tmpHtml += `<div class="square"> ${i} </div>`
     }
-    document.getElementById('prova').innerHTML = i
+    wrapper.innerHTML = tmpHtml;
 }
