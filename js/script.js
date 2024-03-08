@@ -23,6 +23,9 @@ Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot f
 //console.log(wrapper);
 // const container = document.querySelector('.container');
 // container.append(wrapper)
+
+let buzz;
+let fizzbuzz;
 let box = document.createElement('div');
 box.setAttribute('class','square')
 const wrapper = document.querySelector('.container-fluid');
@@ -35,13 +38,18 @@ let tmpHtml = '';
 
 for(let i = 1; i<=maxnum; i++){
     // console.log(i)
-    if (i % 3 === 0){
-        console.log(i, 'divisibile per 3')
-        tmpHtml += `<div class="square"> ${i} </div>`
-    } else if( i % 5 === 0){
+    if((i % 3 ===0)&&(i % 5 === 0)){
+        tmpHtml += `<div class="square"> ${'fizzbuzz'} </div>`
+    }
+    else if (i % 3 === 0){
+        // console.log(i, 'divisibile per 3')
+        tmpHtml += `<div class="square"> ${'fizz'} </div>`        
+
+    }else if(i % 5 === 0){
         // console.log(i, 'divisibile per 5')
-        tmpHtml += `<div class="square"> ${i} </div>`
-    }else{
+        tmpHtml += `<div class="square"> ${'buzz'} </div>`
+    }
+    else{
         tmpHtml += `<div class="square"> ${i} </div>`
     }
     wrapper.innerHTML = tmpHtml;
