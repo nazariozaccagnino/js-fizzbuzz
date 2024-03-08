@@ -26,28 +26,27 @@ Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot f
 
 let buzz;
 let fizzbuzz;
-let box = document.createElement('div');
-box.setAttribute('class','square')
-const wrapper = document.querySelector('.container-fluid');
+const wrapper = document.querySelector('.app');
 wrapper.className = 'd-flex flex-wrap'
-// wrapper.append(box)
+let box = document.createElement('div');
+wrapper.append(box)
 
 
 let maxnum = 100;
 let tmpHtml = '';
 
 for(let i = 1; i<=maxnum; i++){
-    // console.log(i)
-    if((i % 3 ===0)&&(i % 5 === 0)){
-        tmpHtml += `<div class="square"> ${'fizzbuzz'} </div>`
+    
+    if(i % 15 ===0){
+        tmpHtml += `<div class="square fizzbuzz"> ${'fizzbuzz'} </div>`
     }
     else if (i % 3 === 0){
         // console.log(i, 'divisibile per 3')
-        tmpHtml += `<div class="square"> ${'fizz'} </div>`        
+        tmpHtml += `<div class="square fizz"> ${'fizz'} </div>`        
 
     }else if(i % 5 === 0){
         // console.log(i, 'divisibile per 5')
-        tmpHtml += `<div class="square"> ${'buzz'} </div>`
+        tmpHtml += `<div class="square buzz"> ${'buzz'} </div>`
     }
     else{
         tmpHtml += `<div class="square"> ${i} </div>`
