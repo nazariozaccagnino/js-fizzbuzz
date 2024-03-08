@@ -1,36 +1,36 @@
 :root{
     /* palette creata online */
-    --xanthous: #ffc15eff;
-    --earth-yellow: #f7b05bff;
-    --sandy-brown: #f7934cff;
-    --tawny: #cc5803ff;
-    --licorice: #1f1300ff;
+    --gunmetal: #182825ff;
+    --azul: #016fb9ff;
+    --pacific-cyan: #22aed1ff;
+    --air-force-blue: #6d8ea0ff;
+    --khaki: #afa98dff;
 }
 
 body{
-    background-color: var(--xanthous)
+    background-color: var(--gunmetal)
 }
 .square{
     width: 80px;
     height: 80px;
     margin: 5px;
-    background-color: var(--sandy-brown);
+    background-color: var(--azul);
     color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid var(--licorice);
+    
     
 }
 .fizz{
-    background-color: var(--earth-yellow);
+    background-color: var(--pacific-cyan);
 }
 .buzz{
-    background-color: var(--tawny);
+    background-color: var(--air-force-blue);
     
 }
 .fizzbuzz{
-    background-color: var(--licorice);
+    background-color: var(--khaki);
     color: white;
     
 }
